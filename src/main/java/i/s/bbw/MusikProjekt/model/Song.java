@@ -21,4 +21,12 @@ public class Song {
     @Column(name = "dauer", nullable = false)
     private int dauer;
 
+    @ManyToOne
+    @JoinColumn(name = "albumidfs")
+    private Album album;
+
+    @ManyToOne
+    @JoinColumn(name = "genresidfs")
+    private Genres genres;
+
 }

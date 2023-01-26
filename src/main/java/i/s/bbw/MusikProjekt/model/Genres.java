@@ -19,4 +19,6 @@ public class Genres {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @OneToMany(mappedBy="geners")
+    private List<Song> listOfSongs;
 }

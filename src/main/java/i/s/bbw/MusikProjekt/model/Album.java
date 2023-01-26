@@ -20,4 +20,11 @@ public class Album {
     private String name;
     @Column(name = "anzahlsongs", nullable = false)
     private int anzahlsongs;
+
+    @ManyToOne
+    @JoinColumn(name = "artistidfs")
+    private Artist artist;
+
+    @OneToMany(mappedBy="album")
+    private List<Song> listOfSongs;
 }

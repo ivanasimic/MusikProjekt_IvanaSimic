@@ -22,4 +22,11 @@ public class Artist {
     private String vorname;
     @Column(name = "alter", nullable = false)
     private int alter;
+
+    @ManyToOne
+    @JoinColumn(name = "bandidfs")
+    private Band band;
+
+    @OneToMany(mappedBy="artist")
+    private List<Album> listOfAlbums;
 }

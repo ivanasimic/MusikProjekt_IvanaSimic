@@ -21,4 +21,6 @@ public class Band {
     @Column(name = "gruendungsjahr", nullable = false)
     private int gruendungsjahr;
 
+    @OneToMany(mappedBy="band")
+    private List<Artist> listOfArtist;
 }
